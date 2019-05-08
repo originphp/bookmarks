@@ -12,9 +12,9 @@ class BookmarksShellTest extends OriginTestCase
     public function testHelp()
     {
         $this->exec('bookmarks');
-        $this->assertOutputContains('list     	Fetch a list of bookmarks from the db');
-        $this->assertOutputContains('exception	Throws an exception so you can see the debug magic');
-        $this->assertOutputContains('uninstall	Uninstalls the bookmark demo files');
+        $this->assertOutputContains('Fetch a list of bookmarks from the db');
+        $this->assertOutputContains('Throws an exception so you can see the debug magic');
+        $this->assertOutputContains('Uninstalls the bookmark demo files');
         $this->assertExitSuccess();
     }
     public function testList()
