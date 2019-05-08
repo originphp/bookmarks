@@ -1,0 +1,4 @@
+# ignore an entire directory
+/config/database.php
+/config/email.php
+/config/server.php
