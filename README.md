@@ -28,9 +28,31 @@ $ docker-compose up
 
 Then open your web browser and go to [http://localhost:8000](http://localhost:8000)  which will show you a status page that all is working okay.
 
-### Creating the database
+### Configure the Database Connection
 
-```bash
+Open the file `config/database.php.default` in your IDE, I recommend [Visual Studio Code](https://code.visualstudio.com/). Set the host, database, username and password as follows and then save a copy as `database.php`.
+
+```php
+ConnectionManager::config('default', [
+    'host' => 'db', // Docker MySQL container
+    'database' => 'origin',
+    'username' => 'root',
+    'password' => 'root'
+]);
+```
+
+> To access the MySQL server from within the Docker container, we need to use its name which is `db` and not `localhost`.
+
+Even though the container is running, you will want to access the command line.
+
+
+```linux
+$ docker-compose run app bash
+```
+
+Then run the db console to set everything up for you.
+
+```linux
 $ bin/console db setup
 ```
 
@@ -39,6 +61,8 @@ The db setup command will :
 - Create the database
 - Load the schema from `config/db/schema.sql` file
 - Seed the database with records from the `config/db/seed.sql` file 
+
+If all went well when you go to [http://localhost:8000](http://localhost:8000)  it should now say that it is connected to the database.
 
 ### Ready
 
