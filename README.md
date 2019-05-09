@@ -28,53 +28,20 @@ $ docker-compose up
 
 Then open your web browser and go to [http://localhost:8000](http://localhost:8000)  which will show you a status page that all is working okay.
 
-### Create the Database
-
-Lets create the database on the server, from the command line type in the following to access the container and then the MySQL server.
+### Creating the database
 
 ```bash
-$ docker-compose run app bash
-$ mysql -h db -uroot -p
+$ bin/console db setup
 ```
 
-To access the MySQL server from within the docker the container, you need to use the host name `db`.
+The db setup command will :
 
-When it asks you for the password type in **root**, then copy and paste the following sql to create the database called bookmarks and a user called origin with the password **secret**.
-
-```sql
-CREATE DATABASE bookmarks CHARACTER SET utf8mb4;
-GRANT ALL ON bookmarks.* TO 'origin' IDENTIFIED BY 'secret';
-FLUSH PRIVILEGES;
-QUIT
-```
-
-> You can also acces the MySql server using any database management application using `localhost` port `3306`. Windows users can use [Sequel Pro](https://www.sequelpro.com/) or Mac users can use [Heidi SQL](https://www.heidisql.com/).
-
-### Configure the Database
-
-Open the `database.php.default` in your IDE, I recommend [Visual Studio Code](https://code.visualstudio.com/). Set the host, database, username and password as follows and then save a copy as `database.php`.
-
-```php
-ConnectionManager::config('default', [
-    'host' => 'db', // Docker MySQL container
-    'database' => 'bookmarks',
-    'username' => 'origin',
-    'password' => 'secret'
-]);
-```
-> To access the MySQL server from within the Docker container, we need to use its name which is `db` and not `localhost`.
-
-If all went well when you go to [http://localhost:8000](http://localhost:8000)  it should now say that it is connected to the database.
-
-### Import the Database Schema
-
-Finally, we need to import the tables, this information is in a file called `schema.sql` located in the `config` folder. From within the Docker container type in the following.
-
-```bash
-$ bin/console schema import
-```
+- Create the database
+- Load the schema from `config/db/schema.sql` file
+- Seed the database with records from the `config/db/seed.sql` file 
 
 ### Ready
+
 Now that this has been done  goto [http://localhost:8000/users/login](http://localhost:8000/users/login) use the username `demo@example.com` and password `origin` to login.
 
 The bookmarks app also has its own console application, which shows you some features of the CLI.
