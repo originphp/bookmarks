@@ -26,7 +26,7 @@ The container only needs to be built once, after this you will use the `up` and 
 $ docker-compose up
 ```
 
-> IMPORTANT: You need to install the plugins manually for now, I am working on this being done automatically shortly as you are reading this.
+Now the development server is running, but first you need to install the Generate and Debug plugin, you will need to access the docker container from the command line.
 
 ```linux
 $ docker-compose run app bash
