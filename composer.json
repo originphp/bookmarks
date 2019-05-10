@@ -12,8 +12,8 @@
     },
     "scripts": {
       "post-root-package-install": [
-        "bin/console plugin install originphp/generate-plugin",
-        "bin/console plugin install originphp/debug-plugin"
+        "git clone https://www.github.com/originphp/generate-plugin.git plugins/generate",
+        "git clone https://www.github.com/originphp/debug.git plugins/debug"
     ]
     }
 }
