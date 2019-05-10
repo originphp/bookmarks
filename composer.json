@@ -1,13 +1,15 @@
 {
   "name": "originphp/bookmarks",
-    "description": "OriginPHP Bookmarks Demo Application",
-    "homepage": "https://www.originphp.com",
-    "type": "project",
-    "license": "MIT",
-    "require": {
-      "php": ">=7.0.0",
-      "originphp/originphp": ">1.0",
-      "ext-intl": "*",
-      "ext-mbstring": "*"
-    }
+  "description": "OriginPHP Bookmarks Demo Application",
+  "homepage": "https://www.originphp.com",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0.0",
+    "originphp/originphp": ">1.0",
+    "ext-intl": "*",
+    "ext-mbstring": "*",
+    "originphp/debug": "*",
+    "originphp/generate": "*"
+  }
 }
