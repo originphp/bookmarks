@@ -9,11 +9,5 @@
       "originphp/originphp": ">1.0",
       "ext-intl": "*",
       "ext-mbstring": "*"
-    },
-    "scripts": {
-      "post-root-package-install": [
-        "git clone https://www.github.com/originphp/generate-plugin.git plugins/generate",
-        "git clone https://www.github.com/originphp/debug-plugin.git plugins/debug"
-    ]
     }
 }
