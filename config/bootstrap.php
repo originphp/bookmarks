@@ -29,3 +29,5 @@ Configure::write('Security.salt', '-----ORIGIN PHP-----');
  * Load your plugins here
  * @example Plugin::load('ContactManager');
  */
+Plugin::load('Debug');
+Plugin::load('Generate');
