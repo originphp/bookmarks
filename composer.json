@@ -11,9 +11,9 @@
       "ext-mbstring": "*"
     },
     "scripts": {
-      "post-install-cmd": [
-          "bin/console plugin install originphp/generate-plugin",
-          "bin/console plugin install originphp/debug-plugin"
-      ]
+      "post-root-package-install": [
+        "bin/console plugin install originphp/generate-plugin",
+        "bin/console plugin install originphp/debug-plugin"
+    ]
     }
 }
