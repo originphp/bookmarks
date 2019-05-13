@@ -76,6 +76,17 @@ Run the following command to show the available options, one of those is uninsta
 $ bin/console bookmarks
 ```
 
+To run the PHPunit tests, first create the test database.
+
+```linux
+$ bin/console db create origin_test -ds=test
+```
+Then run PHP unit
+
+```linux
+$ vendor/bin/phpunit
+```
+
 To uninstall the bookmarks files
 
 ```bash
