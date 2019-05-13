@@ -7,7 +7,6 @@
   "require": {
     "php": ">=7.0.0",
     "originphp/originphp": ">1.0",
-    "phpunit/phpunit":"^7",
     "ext-intl": "*",
     "ext-mbstring": "*",
     "originphp/debug-plugin": "*",
