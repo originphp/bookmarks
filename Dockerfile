@@ -71,11 +71,6 @@ WORKDIR /var/www
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-interaction
 
-# Install PHP Unit
-RUN wget https://phar.phpunit.de/phpunit-7.phar
-RUN chmod +x phpunit-7.phar
-RUN mv phpunit-7.phar /usr/local/bin/phpunit
-
 # Install X-Debug for PHPUnit Code Coverage (Causes major Performance decrease when extension is enabled)
 RUN pecl install xdebug
 #RUN echo 'zend_extension="/usr/lib/php/20170718/xdebug.so"' >> /etc/php/7.2/cli/php.ini
