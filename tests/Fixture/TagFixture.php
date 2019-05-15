@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace App\Test\Fixture;
 
 use Origin\TestSuite\Fixture;
@@ -7,14 +8,12 @@ class TagFixture extends Fixture
 {
     public $schema = [
       'id' => [
-        'type' => 'integer',
+        'type' => 'primaryKey',
         'length' => 11,
         'default' => null,
         'null' => false,
-        'key' => 'primary',
-        'autoIncrement' => true,
       ],
-      'title' =>  [
+      'title' => [
         'type' => 'string',
         'length' => 255,
         'default' => null,
@@ -31,19 +30,19 @@ class TagFixture extends Fixture
         'null' => false,
       ],
    ];
-   
+
     public $records = [
         [
             'id' => 1000,
-            'title' => 'New' ,
-            'created'=>'2019-01-18 09:53:00',
-            'modified'=>'2019-01-18 09:53:00'
+            'title' => 'New',
+            'created' => '2019-01-18 09:53:00',
+            'modified' => '2019-01-18 09:53:00',
         ],
         [
             'id' => 1001,
-            'title' => 'Top Rated' ,
-            'created'=>'2019-01-18 09:53:00',
-            'modified'=>'2019-01-18 09:53:00'
+            'title' => 'Top Rated',
+            'created' => '2019-01-18 09:53:00',
+            'modified' => '2019-01-18 09:53:00',
         ],
     ];
 }

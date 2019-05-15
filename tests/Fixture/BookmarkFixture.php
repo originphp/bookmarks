@@ -6,14 +6,11 @@ use Origin\TestSuite\Fixture;
 class BookmarkFixture extends Fixture
 {
     public $schema = [
-        'id' =>
-        [
-          'type' => 'integer',
+        'id' =>[
+          'type' => 'primaryKey',
           'length' => 11,
           'default' => null,
           'null' => false,
-          'key' => 'primary',
-          'autoIncrement' => true,
         ],
         'user_id' =>  [
           'type' => 'integer',

@@ -10,12 +10,14 @@ ConnectionManager::config('default',[
   'host' => 'db',
   'database' => 'origin',
   'username' => 'username',
-  'password' => 'password'
+  'password' => 'password',
+  'engine' => 'mysql'
 ]);
 
 ConnectionManager::config('test',[
   'host' => 'db',
   'database' => 'origin_test',
   'username' => 'username',
-  'password' => 'password'
+  'password' => 'password',
+  'engine' => 'mysql'
 ]);

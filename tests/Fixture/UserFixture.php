@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace App\Test\Fixture;
 
 use Origin\TestSuite\Fixture;
@@ -6,14 +7,12 @@ use Origin\TestSuite\Fixture;
 class UserFixture extends Fixture
 {
     public $schema = [
-        'id' =>  [
-        'type' => 'integer',
-        'length' => 11,
-        'default' => null,
-        'null' => false,
-        'key' => 'primary',
-        'autoIncrement' => true,
-        ],
+    'id' => [
+            'type' => 'primaryKey',
+            'length' => 11,
+            'default' => null,
+            'null' => false,
+          ],
         'name' => [
         'type' => 'string',
         'length' => 120,
@@ -24,12 +23,12 @@ class UserFixture extends Fixture
         'length' => 255,
         'null' => false,
     ],
-        'password' =>[
+        'password' => [
         'type' => 'string',
         'length' => 255,
         'null' => false,
     ],
-        'dob' =>  [
+        'dob' => [
         'type' => 'date',
         'default' => null,
         'null' => true,
@@ -41,16 +40,16 @@ class UserFixture extends Fixture
         'modified' => [
         'type' => 'datetime',
         'null' => false,
-    ]
+    ],
    ];
 
     public $records = [
         ['id' => 1000,
-        'name' => 'Frank' ,
-        'email'=>'frank@example.com',
-        'password'=>'secret',
-        'dob'=>'1999-08-01',
-        'created'=>'2019-01-18 09:53:00',
-        'modified'=>'2019-01-18 09:53:00']
+        'name' => 'Frank',
+        'email' => 'frank@example.com',
+        'password' => 'secret',
+        'dob' => '1999-08-01',
+        'created' => '2019-01-18 09:53:00',
+        'modified' => '2019-01-18 09:53:00', ],
     ];
 }
