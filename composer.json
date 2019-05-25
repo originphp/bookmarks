@@ -9,6 +9,6 @@
     "originphp/originphp": ">1.0",
     "ext-intl": "*",
     "ext-mbstring": "*",
-    "originphp/debug-plugin": "*",
+    "originphp/debug-plugin": "*"
   }
 }
