@@ -53,7 +53,7 @@ $ docker-compose run app bash
 Then run the db console to set everything up for you.
 
 ```linux
-$ bin/console db setup
+$ bin/console db:setup
 ```
 
 The db setup command will :
@@ -79,7 +79,7 @@ $ bin/console bookmarks
 To run the PHPunit tests, first create the test database.
 
 ```linux
-$ bin/console db create origin_test -ds=test
+$ bin/console db:create --datasource=test
 ```
 Then run PHP unit
 

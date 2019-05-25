@@ -19,4 +19,10 @@ Upload:       git push origin --tags
 Delete tag:   git tag -d <tag_name>
 
 ## [Unreleased]
+
+## [1.2.0] - 2019-05-25
+### Changed
+- Refactored Shell scripts into Commands
+- Adjusted to console bash script to work from anydirectory
+
 ## [1.0.0] - xxxx-xx-xx

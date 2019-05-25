@@ -10,6 +10,5 @@
     "ext-intl": "*",
     "ext-mbstring": "*",
     "originphp/debug-plugin": "*",
-    "originphp/generate-plugin": "*"
   }
 }

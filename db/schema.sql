@@ -11,7 +11,7 @@ CREATE TABLE users (
 CREATE TABLE bookmarks (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
-  title VARCHAR(50) DEFAULT NULL,
+  title VARCHAR(50) NOT NULL,
   description TEXT,
   url TEXT,
   category VARCHAR(80) DEFAULT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE bookmarks (
 
 CREATE TABLE tags (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(255) DEFAULT NULL,
+  title VARCHAR(255) NOT NULL,
   created DATETIME NOT NULL,
   modified DATETIME NOT NULL,
   UNIQUE KEY title (title)
