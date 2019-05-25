@@ -19,6 +19,13 @@ Upload:       git push origin --tags
 Delete tag:   git tag -d <tag_name>
 
 ## [Unreleased]
+## [1.2.2] - 2019-05-25
+### Removed
+- load legacy plugin from bootstrap
+
+## [1.2.1] - 2019-05-25
+### Fixed
+- composer.json issue
 
 ## [1.2.0] - 2019-05-25
 ### Changed
