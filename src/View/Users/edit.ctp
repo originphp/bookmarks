@@ -11,7 +11,7 @@
                 <?= $this->Form->postLink(
                         __('Delete'),
                         ['action' => 'delete', $user->id],
-                        ['confirm' => __('Are you sure you want to delete user # %d ?', $user->id),
+                        ['confirm' => __('Are you sure you want to delete user # %id%?', ['id'=>$user->id]),
                         'class' => 'nav-link', ]
                     );
                 ?>

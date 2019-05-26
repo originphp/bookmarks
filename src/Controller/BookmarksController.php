@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-
+use Origin\I18n\I18n;
 /**
  * @property \App\Model\Bookmark $Bookmark
  * @property \Origin\Controller\Component\SessionComponent $Session
@@ -87,7 +87,7 @@ class BookmarksController extends AppController
         $bookmark = $this->Bookmark->get($id);
 
         if ($this->Bookmark->delete($bookmark)) {
-            $this->Flash->success(__('The bookmark %d has been deleted.', $bookmark->id));
+            $this->Flash->success(__('The bookmark %id% has been deleted.', ['id'=>$bookmark->id]));
         } else {
             $this->Flash->error(__('The bookmark could not be deleted.'));
         }

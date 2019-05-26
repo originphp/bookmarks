@@ -14,7 +14,7 @@
                 <?= $this->Form->postLink(
                         __('Delete'),
                         ['action' => 'delete', $user->id],
-                        ['confirm' => __('Are you sure you want to delete user # %d ?', $user->id),
+                        ['confirm' => __('Are you sure you want to delete user #%id%?', ['id'=>$user->id]),
                         'class' => 'nav-link', ]
                     );
                 ?>
@@ -58,7 +58,7 @@
             <td class="actions">
                 <?= $this->Html->link(__('Edit'), ['controller' => 'Bookmarks', 'action' => 'edit', $bookmark->id]); ?>
                 |
-                <?= $this->Form->postLink(__('Del'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmark->id], ['confirm' => __('Are you sure you want to delete # %d?', $bookmark->id)]); ?>
+                <?= $this->Form->postLink(__('Del'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmark->id], ['confirm' => __('Are you sure you want to delete # %id%?', ['id'=>$bookmark->id])]); ?>
 
             </td>
         </tr>
