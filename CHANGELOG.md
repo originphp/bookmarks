@@ -19,6 +19,13 @@ Upload:       git push origin --tags
 Delete tag:   git tag -d <tag_name>
 
 ## [Unreleased]
+## [1.3.1] - 2019-05-28
+### Fixed
+- Fixed MySQL 8 password issue
+
+## [1.3.0] - 2019-05-27
+- Changed translation arguments
+
 ## [1.2.2] - 2019-05-25
 ### Removed
 - load legacy plugin from bootstrap
