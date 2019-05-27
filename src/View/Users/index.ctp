@@ -26,7 +26,7 @@
                 <td class="actions">
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]); ?>
                     |
-                    <?= $this->Form->postLink(__('Del'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # %id% ?', ['id'=>$user->id])]); ?>
+                    <?= $this->Form->postLink(__('Del'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {id} ?', ['id'=>$user->id])]); ?>
                 </td>
             </tr>
 

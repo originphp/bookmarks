@@ -26,7 +26,7 @@
                 <td class="actions">
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bookmark->id]); ?>
                     |
-                    <?= $this->Form->postLink(__('Del'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Are you sure you want to delete bookmark %id% ?', ['id'=>$bookmark->id])]); ?>
+                    <?= $this->Form->postLink(__('Del'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Are you sure you want to delete bookmark {id} ?', ['id'=>$bookmark->id])]); ?>
                 </td>
             </tr>
 

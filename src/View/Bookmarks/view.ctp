@@ -14,7 +14,7 @@
                 <?= $this->Form->postLink(
                         __('Delete'),
                         ['action' => 'delete', $bookmark->id],
-                        ['confirm' => __('Are you sure you want to delete bookmark # %id% ?', ['id'=>$bookmark->id]),
+                        ['confirm' => __('Are you sure you want to delete bookmark # {id} ?', ['id'=>$bookmark->id]),
                         'class' => 'nav-link', ]
                     );
                 ?>
