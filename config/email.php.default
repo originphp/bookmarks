@@ -8,11 +8,13 @@ use Origin\Utility\Email;
 
 Email::config(
     'default',[
-        'host' => 'ssl://smtp.gmail.com',
+        'host' => 'smtp.gmail.com',
         'port' => 465,
         'username' => 'email@gmail.com',
         'password' => 'secret',
         'timeout' => 30,
+        'ssl' => true,
         'tls' => false
         ]
     );
+
