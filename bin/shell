@@ -1,4 +1,4 @@
 #!/bin/bash
 SCRIPT_DIRECTORY=$(cd `dirname $0` && pwd)
 ROOT=$(dirname "$SCRIPT_DIRECTORY");
-exec php -q ${ROOT}/vendor/originphp/originphp/src/Console/origin.php "$@"
+exec php -q ${ROOT}/vendor/originphp/framework/src/Console/origin.php "$@"
