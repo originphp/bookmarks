@@ -8,11 +8,11 @@ class BookmarksUninstallCommandTest extends OriginTestCase
 {
     use ConsoleIntegrationTestTrait;
 
-    public function testExecute(){
-        $this->exec('bookmarks:uninstall --dry-run',['yes']);
+    public function testExecute()
+    {
+        $this->exec('bookmarks:uninstall --dry-run', ['yes']);
         $this->assertExitSuccess();
         $hash = md5($this->output());
-        $this->assertEquals('9db8924fd261db20ccb183be9bc0338d',$hash); # 100% text verification
+        $this->assertEquals('92a761400b6d7808d5829184ab060bca', $hash); # 100% text verification
     }
-
 }
