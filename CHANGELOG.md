@@ -19,6 +19,15 @@ Upload:       git push origin --tags
 Delete tag:   git tag -d <tag_name>
 
 ## [Unreleased]
+## [1.5.0] - 2019-06-05
+### Added
+- added default storage template
+
+### Removed
+- Bookmarks shell
+
+### Changed
+- Change framework name
 
 ## [1.4.0] - 2019-05-31
 ### Added
