@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+require dirname(__DIR__) . '/vendor/originphp/framework/src/bootstrap.php';
+use Origin\Console\ConsoleApplication;
+
+$app = new ConsoleApplication();
+$app->name('db');
+$app->description([
+ 'Db tools wrapped up here to demonstrate the Console Application functionality'
+]);
+$app->addCommand('create', 'DbCreate'); 
+$app->addCommand('drop', 'DbDrop'); 
+$app->addCommand('setup', 'DbSetup');
+$app->addCommand('reset', 'DbReset');  
+$app->addCommand('seed', 'DbSeed');
+$app->addCommand('migrate', 'DbMigrate');  
+$app->addCommand('schema-load', 'DbSchemaLoad'); 
+$app->addCommand('schema-dump', 'DbSchemaDump'); 
+$app->run();
