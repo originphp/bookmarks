@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "> STARTING ORIGIN PHP SERVER"
+SCRIPT_DIRECTORY=$(cd `dirname $0` && pwd)
+ROOT=$(dirname "$SCRIPT_DIRECTORY");
+if [ "$1" != "" ]; then
+    php -S "localhost:$1" -t public ${ROOT}/public/index.php
+else
+     php -S localhost:8000 -t public ${ROOT}/public/index.php
+fi
