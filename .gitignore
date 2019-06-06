@@ -1,4 +1,18 @@
 # ignore an entire directory
 /config/database.php
+/config/storage.php
 /config/email.php
 /config/server.php
+/config/.env
+
+/composer.lock
+
+/logs/*
+/tmp/*
+/vendor/*
+
+*.swp
+*.tmp
+*.log
+
+.vscode

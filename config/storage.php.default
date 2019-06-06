@@ -8,6 +8,7 @@ use Origin\Utility\Storage;
 
 Storage::config(
     'default',[
-        'engine' => 'Local'
+        'engine' => 'Local',
+        'path' => null
         ]
     );
