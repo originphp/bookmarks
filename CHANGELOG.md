@@ -19,6 +19,10 @@ Upload:       git push origin --tags
 Delete tag:   git tag -d <tag_name>
 
 ## [Unreleased]
+## [1.5.3] - 2019-06-06
+### Removed
+- default environments
+
 ## [1.5.2] - 2019-06-05
 ### Fixed
 - Fixed test by updating hash
