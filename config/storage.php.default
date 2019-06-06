@@ -12,3 +12,4 @@ Storage::config(
         'path' => null
         ]
     );
+

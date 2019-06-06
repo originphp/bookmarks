@@ -6,8 +6,7 @@
  */
 use Origin\Utility\Email;
 
-Email::config(
-    'default',[
+Email::config('default',[
         'host' => 'smtp.gmail.com',
         'port' => 465,
         'username' => 'email@gmail.com',
@@ -17,4 +16,3 @@ Email::config(
         'tls' => false
         ]
     );
-
