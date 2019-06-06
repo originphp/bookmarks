@@ -11,7 +11,7 @@ Configure::write('debug', true);
 /*
  * If you change namespace name then you will need to change:
  *  1. The namespace declaration in all your files in the src folder
- *  2. config/autoloader.php folder
+ *  2. config/bootstrap.php file
  */
 Configure::write('App.namespace', 'App');
 Configure::write('App.encoding', 'UTF-8');
