@@ -33,7 +33,7 @@
                 echo $this->Form->control('name');
                 echo $this->Form->control('email');
                 echo $this->Form->control('dob');
-                echo $this->Form->button(__('Save'), ['class' => 'btn btn-primary']);
+                echo $this->Form->button(__('Save'), ['class' => 'btn btn-primary','type'=>'submit']);
                 echo $this->Form->end();
             ?>
     </div>

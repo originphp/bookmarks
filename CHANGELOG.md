@@ -19,6 +19,10 @@ Upload:       git push origin --tags
 Delete tag:   git tag -d <tag_name>
 
 ## [Unreleased]
+## [1.8.0] - 2019-06-06
+### Changed
+- Updated to work with FormHelper change
+
 ## [1.7.0] - 2019-06-06
 ### Added
 - Added development bin/server
