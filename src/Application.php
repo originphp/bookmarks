@@ -19,5 +19,6 @@ class Application extends BaseApplication
      */
     public function initialize()
     {
+        $this->loadMiddleware('CsrfProtection');
     }
 }
