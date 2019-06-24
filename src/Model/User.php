@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Origin\Model\Entity;
+use Origin\Utility\Security;
 
 class User extends AppModel
 {
@@ -37,7 +38,7 @@ class User extends AppModel
     public function beforeSave(Entity $entity, array $options = [])
     {
         if (!empty($entity->password)) {
-            $entity->password = password_hash($entity->password, PASSWORD_DEFAULT);
+            $entity->password = Security::hashPassword($entity->password);
         }
 
         return true;
