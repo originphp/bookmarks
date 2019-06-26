@@ -13,7 +13,7 @@ class BookmarkTest extends OriginTestCase
         'Bookmark','BookmarksTag','Tag','User'
     ];
 
-    public function setUp()
+    public function startup()
     {
         $this->Bookmark = ModelRegistry::get('Bookmark');
         parent::setUp();
