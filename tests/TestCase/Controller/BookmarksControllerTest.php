@@ -14,7 +14,7 @@ class BookmarksControllerTest extends OriginTestCase
      */
     public $fixtures = ['Bookmark','BookmarksTag','User'];
 
-    public function setUp()
+    protected function setUp() : void
     {
         $user = [
             'id' => 1000,
