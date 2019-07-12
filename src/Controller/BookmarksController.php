@@ -58,7 +58,7 @@ class BookmarksController extends AppController
     }
 
 
-    public function edit($id)
+    public function edit($id=null)
     {
         $bookmark = $this->Bookmark->get($id, [
            'associated' => ['Tag']
