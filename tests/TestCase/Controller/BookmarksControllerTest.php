@@ -16,6 +16,7 @@ class BookmarksControllerTest extends OriginTestCase
 
     public function startup()
     {
+        parent::startup();
         $user = [
             'id' => 1000,
             'name' => 'Frank' ,
