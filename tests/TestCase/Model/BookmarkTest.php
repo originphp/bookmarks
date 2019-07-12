@@ -16,7 +16,7 @@ class BookmarkTest extends OriginTestCase
     public function startup()
     {
         $this->Bookmark = ModelRegistry::get('Bookmark');
-        parent::setUp();
+        parent::startup();
     }
 
     public function testTagsToString()
@@ -40,10 +40,5 @@ class BookmarkTest extends OriginTestCase
         $this->assertEquals(1002, $bookmark->tags[0]->id);
         $this->assertEquals('Best', $bookmark->tags[1]->title);
         $this->assertEquals(1003, $bookmark->tags[1]->id);
-    }
-
-    public function tearDown()
-    {
-        parent::tearDown();
     }
 }
