@@ -6,31 +6,6 @@ use Origin\TestSuite\Fixture;
 
 class TagFixture extends Fixture
 {
-    public $schema = [
-      'id' => [
-        'type' => 'primaryKey',
-        'length' => 11,
-        'default' => null,
-        'null' => false,
-      ],
-      'title' => [
-        'type' => 'string',
-        'length' => 255,
-        'default' => null,
-        'null' => true,
-      ],
-      'created' => [
-        'type' => 'datetime',
-        'default' => null,
-        'null' => false,
-      ],
-      'modified' => [
-        'type' => 'datetime',
-        'default' => null,
-        'null' => false,
-      ],
-   ];
-
     public $records = [
         [
             'id' => 1000,

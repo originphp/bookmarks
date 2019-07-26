@@ -8,9 +8,12 @@ class BookmarksListCommandTest extends OriginTestCase
 {
     use ConsoleIntegrationTestTrait;
 
-    public function testExecute(){
+    public $fixtures = ['Bookmark'];
+    
+    public function testExecute()
+    {
         $this->exec('bookmarks:list');
         $this->assertExitSuccess();
-        $this->assertOutputContains('Found 2 bookmarks');
+        $this->assertOutputContains('Found 1 bookmarks');
     }
 }
