@@ -1,9 +1,9 @@
 <?php
 namespace App\Test\Controller;
 
+use Origin\Model\ModelRegistry;
 use Origin\TestSuite\OriginTestCase;
 use Origin\TestSuite\IntegrationTestTrait;
-use Origin\Model\ModelRegistry;
 
 class BookmarksControllerTest extends OriginTestCase
 {
@@ -12,21 +12,21 @@ class BookmarksControllerTest extends OriginTestCase
     /**
      * Load the Fixtures
      */
-    public $fixtures = ['Bookmark','BookmarksTag','User'];
+    public $fixtures = ['Bookmark','BookmarksTag','Tag','User'];
 
     public function startup()
     {
         parent::startup();
         $user = [
             'id' => 1000,
-            'name' => 'Frank' ,
-            'email'=>'frank@example.com',
-            'password'=>'secret',
-            'dob'=>'1999-08-01',
-            'created'=>'2019-01-18 09:53:00',
-            'modified'=>'2019-01-18 09:53:00'];
+            'name' => 'Frank',
+            'email' => 'frank@example.com',
+            'password' => 'secret',
+            'dob' => '1999-08-01',
+            'created' => '2019-01-18 09:53:00',
+            'modified' => '2019-01-18 09:53:00', ];
 
-        $this->session(['Auth.User' =>$user]);
+        $this->session(['Auth.User' => $user]);
     }
 
     public function testIndex()
@@ -50,7 +50,7 @@ class BookmarksControllerTest extends OriginTestCase
             'url' => 'https://github.com/originphp/framework/tree/master/origin/docs/development/testing.md',
             'tags' => 'draft,testing,PHPUnit',
             'category' => 'Development',
-            'description' => 'Testing your OriginPHP applications'
+            'description' => 'Testing your OriginPHP applications',
         ];
         $this->post('/bookmarks/add', $post);
         $this->assertResponseSuccess();
@@ -68,10 +68,10 @@ class BookmarksControllerTest extends OriginTestCase
     {
         $post = [
             'title' => 'OriginPHP - The Best PHP Framework',
-            'url'=>'https://www.originphp.com',
-            'category'=>'Development',
-            'description'=>'The best PHP framework'
-            ];
+            'url' => 'https://www.originphp.com',
+            'category' => 'Development',
+            'description' => 'The best PHP framework',
+        ];
         $this->post('/bookmarks/edit/1000', $post);
         $this->assertResponseSuccess();
         $this->assertRedirect('/bookmarks/view/1000');
@@ -99,7 +99,7 @@ class BookmarksControllerTest extends OriginTestCase
         $this->assertRedirect('/bookmarks/index');
 
         $Bookmark = ModelRegistry::get('Bookmark');
-        $count = $Bookmark->find('count', ['conditions'=>['id'=>1000]]);
+        $count = $Bookmark->find('count', ['conditions' => ['id' => 1000]]);
         $this->assertEquals(0, $count);
     }
 }
