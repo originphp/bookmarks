@@ -10,6 +10,7 @@ class AppModel extends Model
     public function initialize(array $config)
     {
         $this->loadBehavior('Timestamp');
+        $this->loadBehavior('Delocalize');
     }
 
     /**
