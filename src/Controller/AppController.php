@@ -5,6 +5,11 @@ use Origin\Controller\Controller;
 use Origin\Utility\Date;
 use Origin\Utility\Number;
 
+/**
+ * @property \Origin\Controller\Component\SessionComponent $Session
+ * @property \Origin\Controller\Component\CookieComponent $Cookie
+ * @property \Origin\Controller\Component\AuthComponent $Auth
+ */
 class AppController extends Controller
 {
     /**
