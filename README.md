@@ -2,7 +2,7 @@
 
 This is the OriginPHP demo application
 
-To use this first configure the database using `config\database.php`
+Make sure your database is configured.
 
 If you are using Docker, start the container, if its not already started.
 

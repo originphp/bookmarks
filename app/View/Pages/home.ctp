@@ -62,13 +62,12 @@
       }
       ?>
 
-      <?php
-        $databaseConfig = CONFIG.DS.'database.php';
-
-        if (file_exists($databaseConfig)) {
-            success('config/database.php found.');
+     <?php
+        $env = CONFIG.DS.'.env.php';
+        if (file_exists($env)) {
+            success("{$env} found");
         } else {
-            warning('config/database.php not found.');
+            warning("{$env} not found");
         }
       ?>
 
@@ -81,19 +80,10 @@
                 $db = ConnectionManager::get('default');
                 success('Connected to database.');
             } catch (\Exception $e) {
-                warning('Unable to connect to the database. Please check the configuration and that the database exists.');
+                warning('Unable to connect to the database.');
             }
         }
       ?>
-
-      <?php
-        if (file_exists(CONFIG.DS.'server.php')) {
-            success('config/server.php found');
-        } else {
-            info('config/server.php not found. You can optionally have different configurations for each deployment, e.g Development, Staging, Production.');
-        }
-      ?>
-
     </div>
 
     <!-- Optional JavaScript -->

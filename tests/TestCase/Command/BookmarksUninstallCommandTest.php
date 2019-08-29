@@ -13,6 +13,6 @@ class BookmarksUninstallCommandTest extends OriginTestCase
         $this->exec('bookmarks:uninstall --dry-run', ['yes']);
         $this->assertExitSuccess();
         $hash = md5($this->output());
-        $this->assertEquals('92a761400b6d7808d5829184ab060bca', $hash); # 100% text verification
+        $this->assertEquals('3f2a3b7f7817fb055e760a2b0b07f96b', $hash); # 100% text verification
     }
 }
