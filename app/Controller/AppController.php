@@ -2,8 +2,7 @@
 namespace App\Controller;
 
 use Origin\Controller\Controller;
-use Origin\Utility\Date;
-use Origin\Utility\Number;
+use Origin\I18n\I18n;
 
 /**
  * @property \Origin\Controller\Component\SessionComponent $Session
@@ -39,11 +38,12 @@ class AppController extends Controller
         $this->loadHelper('Date');
 
         /**
-         * Set the default locale settings for dates and numbers. When dates and numbers
-         * are displayed or parsed (Date::parse) it will be assume they are in this format.
+         * Configure your locale settings here. OriginPHP ships with en_US and en_GB locales
+         * by default. For others you can run the following command and it will create the locale
+         * settings in config/locale.
+         * $ bin/console locale:generate zh-CN ru-RU fr-FR es-ES de-DE it-IT ja-JP
          */
-        Date::locale(['timezone' => 'UTC','date' => 'm/d/Y','datetime' => 'm/d/Y H:i','time' => 'H:i']);
-        Number::locale(['currency'=>'USD','thousands'=>',','decimals'=>'.','places'=>2]);
+        I18n::initialize(['locale'=>'en_US','language'=>'en','timezone'=>'UTC']);
     }
 
     /**
