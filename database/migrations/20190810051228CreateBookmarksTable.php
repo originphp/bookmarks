@@ -5,7 +5,7 @@ class CreateBookmarksTableMigration extends Migration
 {
     public function change()
     {
-        $tableOptions = ['engine' => 'InnoDB', 'collation' => 'utf8mb4_0900_ai_ci','autoIncrement' => 1000];
+        $tableOptions = ['engine' => 'InnoDB','autoIncrement' => 1000];
        
         $this->createTable('bookmarks', [
             'user_id' => ['type' => 'integer', 'limit' => 11, 'unsigned' => false, 'null' => false, 'default' => null],

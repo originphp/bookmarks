@@ -3,7 +3,7 @@ use Origin\Model\Schema;
 
 class MigrationsSchema extends Schema
 {
-    const VERSION = 20190808104733;
+    const VERSION = 20190905100000;
 
     /**
      * Table name
@@ -23,6 +23,6 @@ class MigrationsSchema extends Schema
         'indexes' => [
             'migrations_version_index' => ['type' => 'index', 'column' => 'version'],
         ],
-        'options' => ['engine' => 'InnoDB', 'collation' => 'utf8mb4_0900_ai_ci'],
+        'options' => ['engine' => 'InnoDB', 'autoIncrement' => 1000],
     ];
 }

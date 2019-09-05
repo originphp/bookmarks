@@ -5,7 +5,7 @@ class CreateTagsTableMigration extends Migration
 {
     public function change()
     {
-        $tableOptions = ['engine' => 'InnoDB', 'collation' => 'utf8mb4_0900_ai_ci','autoIncrement' => 1000];
+        $tableOptions = ['engine' => 'InnoDB', 'autoIncrement' => 1000];
        
         $this->createTable('tags', [
             'title' => ['type' => 'string', 'limit' => 255, 'null' => false, 'default' => null],

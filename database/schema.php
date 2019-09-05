@@ -23,7 +23,7 @@ class ApplicationSchema extends Schema
         'indexes' => [
             'user_id' => ['type' => 'index', 'column' => 'user_id'],
         ],
-        'options' => ['engine' => 'InnoDB', 'collation' => 'utf8mb4_0900_ai_ci'],
+        'options' => ['engine' => 'InnoDB'],
     ];
 
     public $bookmarks_tags = [
@@ -39,7 +39,7 @@ class ApplicationSchema extends Schema
         'indexes' => [
             'tag_id' => ['type' => 'index', 'column' => 'tag_id'],
         ],
-        'options' => ['engine' => 'InnoDB', 'collation' => 'utf8mb4_0900_ai_ci'],
+        'options' => ['engine' => 'InnoDB'],
     ];
 
     public $tags = [
@@ -54,7 +54,7 @@ class ApplicationSchema extends Schema
             'title' => ['type' => 'unique', 'column' => 'title'],
         ],
         'indexes' => [],
-        'options' => ['engine' => 'InnoDB', 'collation' => 'utf8mb4_0900_ai_ci'],
+        'options' => ['engine' => 'InnoDB'],
     ];
     
     public $users = [
@@ -72,6 +72,6 @@ class ApplicationSchema extends Schema
             'primary' => ['type' => 'primary', 'column' => 'id'],
         ],
         'indexes' => [],
-        'options' => ['engine' => 'InnoDB', 'collation' => 'utf8mb4_0900_ai_ci'],
+        'options' => ['engine' => 'InnoDB'],
     ];
 }
