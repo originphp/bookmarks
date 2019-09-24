@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class Tag extends AppModel
+class Tag extends ApplicationModel
 {
     public $displayField = 'title';
 

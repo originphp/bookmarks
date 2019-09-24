@@ -1,16 +1,16 @@
 <?php
 namespace App\Controller;
-use Origin\I18n\I18n;
+
 /**
  * @property \App\Model\Bookmark $Bookmark
  * @property \Origin\Controller\Component\SessionComponent $Session
  * @property \Origin\Controller\Component\CookieComponent $Cookie
  */
-class BookmarksController extends AppController
+class BookmarksController extends ApplicationController
 {
     public function initialize()
     {
-        $this->loadComponent('Auth',[
+        $this->loadComponent('Auth', [
             'loginRedirect' => '/bookmarks'
             ]); // Load Authentication - placed here so we can uninstall
         parent::initialize();

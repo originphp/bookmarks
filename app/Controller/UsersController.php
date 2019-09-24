@@ -4,7 +4,7 @@ namespace App\Controller;
 /**
  * @property \App\Model\User $User
  */
-class UsersController extends AppController
+class UsersController extends ApplicationController
 {
     public $paginate = [
       'limit' => 20,

@@ -3,8 +3,9 @@
 namespace App\Model;
 
 use Origin\Model\Entity;
+use ArrayObject;
 
-class Bookmark extends AppModel
+class Bookmark extends ApplicationModel
 {
     /**
      * A list of Categories for dropdown select.
@@ -48,27 +49,7 @@ class Bookmark extends AppModel
         $this->hasAndBelongsToMany('Tag');
     }
 
-    /**
-     * Callback that is triggered just before the request data is marshalled.
-     * This should return the requested data
-     *
-     * @param array $requestData
-     * @return array
-     */
-    public function xxbeforeMarshal(array $requestData = [])
-    {
-        if (!empty($requestData['tag_string'])) {
-            $requestData['tags'] = [];
-            $tags = explode(',', $requestData['tag_string']);
-            foreach ($tags as $tag) {
-                $requestData['tags'][] = ['title' => $tag];
-            }
-        }
-
-        return $requestData;
-    }
-
-    public function afterFind($results)
+    public function afterFind($results, ArrayObject $options)
     {
         /*
          * Convert hasAndBelongsToMany tags into string
@@ -103,7 +84,7 @@ class Bookmark extends AppModel
      * @param array $options
      * @return void
      */
-    public function beforeSave(Entity $entity, array $options = [])
+    public function beforeSave(Entity $entity, ArrayObject $options)
     {
         if ($entity->has('tag_string')) {
             $entity->tags = [];

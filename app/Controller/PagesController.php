@@ -7,9 +7,9 @@ namespace App\Controller;
  *
  *  Router::add('/pages/*', ['controller'=>'Pages','action'=>'display']);
  */
-use App\Controller\AppController;
+use App\Controller\ApplicationController;
 
-class PagesController extends AppController
+class PagesController extends ApplicationController
 {
     public $layout = 'default';
 

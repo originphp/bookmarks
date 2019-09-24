@@ -4,8 +4,9 @@ namespace App\Model;
 
 use Origin\Model\Entity;
 use Origin\Utility\Security;
+use ArrayObject;
 
-class User extends AppModel
+class User extends ApplicationModel
 {
     public function initialize(array $config)
     {
@@ -32,10 +33,10 @@ class User extends AppModel
      * aswell. Default is blowfish and is considered the most secure. Length will be 60 but
      * to allow for changes in PHP going forward with strong algos, use 255.
      *
-     * @param Entity $entity
-     * @param array  $options
+     * @param \Origin\Model\Entity $entity
+     * @param ArrayObject $options
      */
-    public function beforeSave(Entity $entity, array $options = [])
+    public function beforeSave(Entity $entity, ArrayObject $options)
     {
         if (!empty($entity->password)) {
             $entity->password = Security::hashPassword($entity->password);
