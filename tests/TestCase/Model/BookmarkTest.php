@@ -14,7 +14,6 @@ class BookmarkTest extends OriginTestCase
     public function startup()
     {
         $this->Bookmark = ModelRegistry::get('Bookmark');
-        parent::startup();
     }
 
     public function testTagsToString()

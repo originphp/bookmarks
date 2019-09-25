@@ -11,21 +11,25 @@ class BookmarkFixture extends Fixture
      * @var array
      */
     public $records = [
-        ['id' => 1000,
+        [
+            'id' => 1000,
             'user_id' => 1000,
             'title' => 'OriginPHP',
             'url' => 'https://www.originphp.com',
             'category' => 'Development',
             'description' => 'The best PHP framework',
             'created' => '2019-01-18 09:53:00',
-            'modified' => '2019-01-18 09:53:00', ],
-        ['id' => 1001,
+            'modified' => '2019-01-18 09:53:00'
+        ],
+        [
+            'id' => 1001,
             'user_id' => 1000,
             'title' => 'Google',
             'url' => 'https://www.gogle.com',
             'category' => 'Search',
             'description' => 'The most used search engine in the world!',
             'created' => '2019-01-18 09:53:00',
-            'modified' => '2019-01-18 09:53:00', ],
+            'modified' => '2019-01-18 09:53:00'
+        ]
     ];
 }

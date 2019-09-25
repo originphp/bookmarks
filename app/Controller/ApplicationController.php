@@ -17,39 +17,20 @@ class ApplicationController extends Controller
      */
     public function initialize()
     {
-        parent::initialize();
-
+       
         /**
-         * Core components to be loaded by default.
-         */
-        $this->loadComponent('Session');
-        $this->loadComponent('Cookie');
-        $this->loadComponent('Flash');
-
-        /**
-         * Load Core Helpers (Helpers will be lazy loaded)
-         */
-        $this->loadHelper('Session');
-        $this->loadHelper('Cookie');
-        $this->loadHelper('Flash');
-        $this->loadHelper('Html');
-        $this->loadHelper('Form');
-        $this->loadHelper('Number');
-        $this->loadHelper('Date');
-
-        /**
-         * Configure your locale settings here. OriginPHP ships with en_US and en_GB locales
-         * by default. For others you can run the following command and it will create the locale
-         * settings in config/locale.
-         * $ bin/console locale:generate zh-CN ru-RU fr-FR es-ES de-DE it-IT ja-JP
-         */
+        * Configure your locale settings here. OriginPHP ships with en_US and en_GB locales
+        * by default. For others you can run the following command and it will create the locale
+        * settings in config/locale.
+        * $ bin/console locale:generate zh-CN ru-RU fr-FR es-ES de-DE it-IT ja-JP
+        */
         I18n::initialize(['locale'=>'en_US','language'=>'en','timezone'=>'UTC']);
     }
 
     /**
      * This is called before the controller action is executed but after initialize.
      */
-    public function beforeFilter()
+    public function beforeAction()
     {
     }
 
@@ -65,7 +46,7 @@ class ApplicationController extends Controller
      * This is called after the controller action is executed, and view has been rendered
      * but before it has been sent to the client.
      */
-    public function afterFilter()
+    public function afterAction()
     {
     }
 
