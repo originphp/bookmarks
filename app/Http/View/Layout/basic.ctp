@@ -1,6 +1,6 @@
 <?php
 /**
- * @var \App\Http\View\AppView $this
+ * @var \App\Http\View\ApplicationView $this
  */
 
 use Debug\DebugBar;
