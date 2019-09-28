@@ -26,6 +26,7 @@ class BookmarksUninstallCommand extends Command
         ROOT . DS . 'tests' . DS . 'Fixture' . DS  . 'BookmarkFixture.php',
         ROOT . DS . 'tests' . DS . 'Fixture' . DS  . 'BookmarksTagFixture.php',
         ROOT . DS . 'tests' . DS . 'Fixture' . DS  . 'UserFixture.php',
+        ROOT . DS . 'tests' . DS . 'Fixture' . DS  . 'TagFixture.php',
         ROOT . DS . 'tests' . DS . 'TestCase' . DS  . 'Http' . DS . 'Controller' .DS . 'BookmarksControllerTest.php',
         ROOT . DS . 'tests' . DS . 'TestCase' . DS  . 'Model' . DS . 'BookmarkTest.php',
         ROOT . DS . 'tests' . DS . 'TestCase' . DS  . 'Console' . DS . 'Command' .DS . 'BookmarksExceptionCommandTest.php',
