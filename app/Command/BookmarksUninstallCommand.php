@@ -33,16 +33,17 @@ class BookmarksUninstallCommand extends Command
     ];
 
     protected $name = 'bookmarks:uninstall';
-
     protected $description = 'Uninstalls the Bookmarks application';
 
-    public function initialize(){
+    public function initialize() : void
+    {
         $this->addOption('dry-run',[
             'type'=>'boolean',
             'description'=>'Does not delete, just checks files and folders exists']);
     }
 
-    public function execute(){
+    public function execute() : void
+    {
         $this->out("The following files will deleted:");
         $this->out('');
 
@@ -76,7 +77,8 @@ class BookmarksUninstallCommand extends Command
         }
     }
     
-    public function delete(string $filename){
+    private function delete(string $filename)
+    {
         if(!file_Exists($filename)){
             return false;
         }
@@ -86,7 +88,8 @@ class BookmarksUninstallCommand extends Command
         return unlink($filename);
     }
 
-    public function rmdir(string $folder){
+
+    private function rmdir(string $folder){
         if(!file_exists($folder)){
             return false;
         }

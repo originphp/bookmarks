@@ -6,7 +6,7 @@ class Tag extends ApplicationModel
 {
     public $displayField = 'title';
 
-    public function initialize(array $config)
+    public function initialize(array $config) : void
     {
         parent::initialize($config);
         $this->hasAndBelongsToMany('Bookmark');

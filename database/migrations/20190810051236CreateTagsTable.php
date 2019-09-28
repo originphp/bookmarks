@@ -3,7 +3,7 @@ use Origin\Migration\Migration;
 
 class CreateTagsTableMigration extends Migration
 {
-    public function change()
+    public function change() : void
     {
         $tableOptions = ['engine' => 'InnoDB', 'autoIncrement' => 1000];
        

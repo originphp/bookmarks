@@ -8,7 +8,7 @@ class ApplicationSeed extends Seed
      *
      * @return void
      */
-    public function initialize()
+    public function initialize() : void
     {
         $this->bookmarks = [
             ['id' => 1000,'user_id' => 1000,'title' => 'Google','url' => 'https://www.google.com','description' => 'The most used search engine in the world.','category' => 'Search','created' => now(),'modified' => now()],

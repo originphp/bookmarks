@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Origin\Model\Entity;
 use ArrayObject;
+use Origin\Model\Collection;
 
 class Bookmark extends ApplicationModel
 {
@@ -20,7 +21,7 @@ class Bookmark extends ApplicationModel
       'Health' => 'Health',
     ];
 
-    public function initialize(array $config)
+    public function initialize(array $config) : void
     {
         parent::initialize($config);
 
@@ -49,16 +50,16 @@ class Bookmark extends ApplicationModel
         $this->hasAndBelongsToMany('Tag');
     }
 
-    public function afterFind($results, ArrayObject $options)
+    public function afterFind(Collection $results, ArrayObject $options) : void
     {
+        
         /*
          * Convert hasAndBelongsToMany tags into string
          */
-        if (isset($results->tags)) {
-            $results->tag_string = $this->tagsToString($results->tags);
+        if (isset($results[0]->tags)) {
+            $results[0]->tag_string = $this->tagsToString($results[0]->tags);
         }
-
-        return $results;
+       
     }
 
     /**
@@ -82,17 +83,15 @@ class Bookmark extends ApplicationModel
      *
      * @param Entity $entity
      * @param array $options
-     * @return void
+     * @return bool
      */
-    public function beforeSave(Entity $entity, ArrayObject $options)
+    public function beforeSave(Entity $entity, ArrayObject $options) : bool
     {
-        if ($entity->has('tag_string')) {
-            $entity->tags = [];
-            if ($entity->tag_string) {
-                $tags = explode(',', $entity->tag_string);
-                foreach ($tags as $tag) {
-                    $entity->tags[] = $this->Tag->new(['title' => $tag]);
-                }
+        $entity->tags = [];
+        if ($entity->tag_string) {
+            $tags = explode(',', $entity->tag_string);
+            foreach ($tags as $tag) {
+                $entity->tags[] = $this->Tag->new(['title' => $tag]);
             }
         }
         return true;

@@ -8,7 +8,7 @@ use ArrayObject;
 
 class User extends ApplicationModel
 {
-    public function initialize(array $config)
+    public function initialize(array $config) : void
     {
         parent::initialize($config);
  
@@ -35,8 +35,9 @@ class User extends ApplicationModel
      *
      * @param \Origin\Model\Entity $entity
      * @param ArrayObject $options
+     * @return bool
      */
-    public function beforeSave(Entity $entity, ArrayObject $options)
+    public function beforeSave(Entity $entity, ArrayObject $options) : bool
     {
         if (!empty($entity->password)) {
             $entity->password = Security::hashPassword($entity->password);

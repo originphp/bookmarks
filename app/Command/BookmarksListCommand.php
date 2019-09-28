@@ -9,11 +9,13 @@ class BookmarksListCommand extends Command
 
     protected $description = 'List the available bookmarks';
 
-    public function initialize(){
+    public function initialize() : void
+    {
         $this->loadModel('Bookmark');
     }
  
-    public function execute(){
+    public function execute() : void
+    {
         
         $bookmarks = $this->Bookmark->find('all');
         

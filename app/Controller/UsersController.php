@@ -10,7 +10,7 @@ class UsersController extends ApplicationController
       'limit' => 20,
     ];
 
-    public function initialize()
+    public function initialize() : void
     {
         $this->loadComponent('Auth',[
             'loginRedirect' => '/bookmarks'

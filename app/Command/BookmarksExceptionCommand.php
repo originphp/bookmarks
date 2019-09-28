@@ -9,11 +9,13 @@ class BookmarksExceptionCommand extends Command
 
     protected $description = 'This is going to generate an exception to display the pretty exception handling';
 
-    public function initialize(){
+    public function initialize() : void
+    {
 
     }
  
-    public function execute(){
+    public function execute() : void
+    {
        throw new Exception('Freeze!!'); // On purpose
     }
 }
