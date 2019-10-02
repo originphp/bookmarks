@@ -11,7 +11,7 @@ class BookmarkTest extends OriginTestCase
 {
     public $fixtures = ['Bookmark','BookmarksTag','Tag','User'];
 
-    public function startup()
+    public function startup() : void
     {
         $this->Bookmark = ModelRegistry::get('Bookmark');
     }
