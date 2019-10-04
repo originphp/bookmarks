@@ -1,6 +1,6 @@
 <?php
 /**
- * Application initialization for
+ * Application initialization
  */
 namespace App\Console;
 
