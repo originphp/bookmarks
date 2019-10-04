@@ -2,14 +2,15 @@
 
 namespace App\Model;
 
+use Origin\Model\Concern\Delocalizable;
+use Origin\Model\Concern\Timestampable;
 use Origin\Model\Model;
-use Origin\Model\Entity;
 
 class ApplicationModel extends Model
 {
+    use Delocalizable,Timestampable;
+
     public function initialize(array $config) : void
     {
-        $this->loadBehavior('Timestamp');
-        $this->loadBehavior('Delocalize');
     }
 }

@@ -26,6 +26,8 @@ class User extends ApplicationModel
         $this->validate('dob', 'date');
 
         $this->hasMany('Bookmark');
+
+        $this->beforeSave('hashUserPassword');
     }
 
     /**
@@ -37,7 +39,7 @@ class User extends ApplicationModel
      * @param ArrayObject $options
      * @return bool
      */
-    public function beforeSave(Entity $entity, ArrayObject $options) : bool
+    public function hashUserPassword(Entity $entity, ArrayObject $options) : bool
     {
         if (!empty($entity->password)) {
             $entity->password = Security::hashPassword($entity->password);
