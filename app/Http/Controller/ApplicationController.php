@@ -29,15 +29,7 @@ class ApplicationController extends Controller
     /**
      * This is called before the controller action is executed but after initialize.
      */
-    public function beforeAction()
-    {
-    }
-
-    /**
-     * This is called after the after the action has been run before the view has
-     * been rendered but beore the after filter.
-     */
-    public function beforeRender()
+    public function startup()
     {
     }
 
@@ -45,14 +37,7 @@ class ApplicationController extends Controller
      * This is called after the controller action is executed, and view has been rendered
      * but before it has been sent to the client.
      */
-    public function afterAction()
-    {
-    }
-
-    /**
-    * Callback just prior to redirecting
-    */
-    public function beforeRedirect()
+    public function shutdown()
     {
     }
 }
