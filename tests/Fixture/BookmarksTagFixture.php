@@ -5,7 +5,7 @@ use Origin\TestSuite\Fixture;
 
 class BookmarksTagFixture extends Fixture
 {
-    public $records = [
+    protected $records = [
         [
             'bookmark_id' => 1000,
             'tag_id' => 1000,

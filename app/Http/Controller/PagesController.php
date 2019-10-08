@@ -8,7 +8,7 @@ namespace App\Http\Controller;
  */
 class PagesController extends ApplicationController
 {
-    public $layout = 'default';
+    protected $layout = 'default';
 
     public function display()
     {

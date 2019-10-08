@@ -8,7 +8,7 @@ class BookmarksListCommandTest extends OriginTestCase
 {
     use ConsoleIntegrationTestTrait;
 
-    public $fixtures = ['Bookmark','BookmarksTag','Tag','User'];
+    protected $fixtures = ['Bookmark','BookmarksTag','Tag','User'];
     
     public function testExecute()
     {

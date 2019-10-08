@@ -13,7 +13,7 @@ class Bookmark extends ApplicationModel
      *
      * @var array
      */
-    public $categories = [
+    protected $categories = [
       'Business' => 'Business',
       'Computing' => 'Computing',
       'Entertainment' => 'Entertainment',

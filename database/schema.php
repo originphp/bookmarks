@@ -5,7 +5,7 @@ class ApplicationSchema extends Schema
 {
     const VERSION = 20190808044021;
 
-    public $bookmarks = [
+    protected $bookmarks = [
         'columns' => [
             'id' => ['type' => 'integer', 'limit' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'autoIncrement' => true],
             'user_id' => ['type' => 'integer', 'limit' => 11, 'unsigned' => false, 'null' => false, 'default' => null],
@@ -26,7 +26,7 @@ class ApplicationSchema extends Schema
         'options' => ['engine' => 'InnoDB'],
     ];
 
-    public $bookmarks_tags = [
+    protected $bookmarks_tags = [
         'columns' => [
             'bookmark_id' => ['type' => 'integer', 'limit' => 11, 'unsigned' => false, 'null' => false, 'default' => null],
             'tag_id' => ['type' => 'integer', 'limit' => 11, 'unsigned' => false, 'null' => false, 'default' => null],
@@ -42,7 +42,7 @@ class ApplicationSchema extends Schema
         'options' => ['engine' => 'InnoDB'],
     ];
 
-    public $tags = [
+    protected $tags = [
         'columns' => [
             'id' => ['type' => 'integer', 'limit' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'autoIncrement' => true],
             'title' => ['type' => 'string', 'limit' => 255, 'null' => false, 'default' => null],
@@ -57,7 +57,7 @@ class ApplicationSchema extends Schema
         'options' => ['engine' => 'InnoDB'],
     ];
     
-    public $users = [
+    protected $users = [
         'columns' => [
             'id' => ['type' => 'integer', 'limit' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'autoIncrement' => true],
             'name' => ['type' => 'string', 'limit' => 120, 'null' => false, 'default' => null],

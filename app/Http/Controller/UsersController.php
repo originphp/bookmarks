@@ -8,7 +8,7 @@ namespace App\Http\Controller;
  */
 class UsersController extends ApplicationController
 {
-    public $paginate = [
+    protected $paginate = [
       'limit' => 20,
     ];
 

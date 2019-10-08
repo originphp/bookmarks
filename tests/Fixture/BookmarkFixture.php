@@ -10,7 +10,7 @@ class BookmarkFixture extends Fixture
      *
      * @var array
      */
-    public $records = [
+    protected $records = [
         [
             'id' => 1000,
             'user_id' => 1000,

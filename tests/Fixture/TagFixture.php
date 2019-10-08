@@ -6,7 +6,7 @@ use Origin\TestSuite\Fixture;
 
 class TagFixture extends Fixture
 {
-    public $records = [
+    protected $records = [
         [
             'id' => 1000,
             'title' => 'New',

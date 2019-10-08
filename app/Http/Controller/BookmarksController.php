@@ -16,7 +16,7 @@ class BookmarksController extends ApplicationController
         parent::initialize();
     }
 
-    public $paginate = [
+    protected $paginate = [
         'limit' => 20,
       ];
     

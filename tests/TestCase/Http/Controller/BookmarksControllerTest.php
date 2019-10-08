@@ -12,7 +12,7 @@ class BookmarksControllerTest extends OriginTestCase
     /**
      * Load the Fixtures
      */
-    public $fixtures = ['Bookmark','BookmarksTag','Tag','User'];
+    protected $fixtures = ['Bookmark','BookmarksTag','Tag','User'];
 
     public function startup() : void
     {
