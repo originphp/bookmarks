@@ -40,13 +40,13 @@ class BookmarksUninstallCommand extends Command
     public function initialize() : void
     {
         $this->addOption('dry-run', [
-            'type'=>'boolean',
-            'description'=>'Does not delete, just checks files and folders exists']);
+            'type' => 'boolean',
+            'description' => 'Does not delete, just checks files and folders exists']);
     }
 
     public function execute() : void
     {
-        $this->out("The following files will deleted:");
+        $this->out('The following files will deleted:');
         $this->out('');
 
         foreach ($this->files as $file) {
@@ -56,7 +56,7 @@ class BookmarksUninstallCommand extends Command
         $result = $this->io->askChoice('Are you sure?', ['yes','no'], 'no');
         if ($result === 'yes') {
             $this->out('');
-            $this->out("Deleting Files");
+            $this->out('Deleting Files');
             $this->out('');
             foreach ($this->files as $file) {
                 if ($this->delete($file)) {
@@ -66,10 +66,10 @@ class BookmarksUninstallCommand extends Command
                 }
             }
             $this->out('');
-            $this->out("Deleting Folders");
+            $this->out('Deleting Folders');
             $this->out('');
 
-            foreach ([ SRC . DS . 'View' . DS . 'Bookmarks', SRC . DS . 'View' . DS . 'Users'] as $folder) {
+            foreach ([SRC . DS . 'View' . DS . 'Bookmarks', SRC . DS . 'View' . DS . 'Users'] as $folder) {
                 if ($this->rmdir($folder)) {
                     $this->io->status('ok', $folder);
                 } else {
@@ -81,24 +81,25 @@ class BookmarksUninstallCommand extends Command
     
     private function delete(string $filename)
     {
-        if (!file_Exists($filename)) {
+        if (! file_Exists($filename)) {
             return false;
         }
         if ($this->options('dry-run')) {
             return true;
         }
+
         return unlink($filename);
     }
 
-
     private function rmdir(string $folder)
     {
-        if (!file_exists($folder)) {
+        if (! file_exists($folder)) {
             return false;
         }
         if ($this->options('dry-run')) {
             return true;
         }
+
         return rmdir($folder);
     }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Model;
 
+use ArrayObject;
 use Origin\Model\Entity;
 use Origin\Utility\Security;
-use ArrayObject;
 
 class User extends ApplicationModel
 {
@@ -41,7 +41,7 @@ class User extends ApplicationModel
      */
     public function hashUserPassword(Entity $entity, ArrayObject $options) : bool
     {
-        if (!empty($entity->password)) {
+        if (! empty($entity->password)) {
             $entity->password = Security::hashPassword($entity->password);
         }
 

@@ -14,11 +14,11 @@ class Bookmark extends ApplicationModel
      * @var array
      */
     protected $categories = [
-      'Business' => 'Business',
-      'Computing' => 'Computing',
-      'Entertainment' => 'Entertainment',
-      'Finance' => 'Finance',
-      'Health' => 'Health',
+        'Business' => 'Business',
+        'Computing' => 'Computing',
+        'Entertainment' => 'Entertainment',
+        'Finance' => 'Finance',
+        'Health' => 'Health',
     ];
 
     public function initialize(array $config) : void
@@ -31,14 +31,14 @@ class Bookmark extends ApplicationModel
         $this->validate('user_id', [
             'rule' => 'notBlank',
             'message' => 'This field is required'
-            ]);
+        ]);
         $this->validate('title', 'notBlank');
         $this->validate('url', [
             'notBlank' => [
-                'rule'=>'notBlank'
+                'rule' => 'notBlank'
             ],
             'url' => [
-                'rule'=>'url',
+                'rule' => 'url',
                 'message' => 'Invalid URL'
             ],
         ]);

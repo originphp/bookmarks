@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Controller;
 
-use Origin\Http\Controller\Controller;
 use Origin\I18n\I18n;
+use Origin\Http\Controller\Controller;
 
 /**
  * @property \Origin\Http\Controller\Component\SessionComponent $Session
@@ -23,7 +23,7 @@ class ApplicationController extends Controller
          * settings in config/locale.
          * $ bin/console locale:generate zh-CN ru-RU fr-FR es-ES de-DE it-IT ja-JP
          */
-        I18n::initialize(['locale'=>'en_US','language'=>'en','timezone'=>'UTC']);
+        I18n::initialize(['locale' => 'en_US','language' => 'en','timezone' => 'UTC']);
     }
 
     /**

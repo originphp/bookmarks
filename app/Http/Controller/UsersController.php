@@ -9,14 +9,14 @@ namespace App\Http\Controller;
 class UsersController extends ApplicationController
 {
     protected $paginate = [
-      'limit' => 20,
+        'limit' => 20,
     ];
 
     public function initialize() : void
     {
         $this->loadComponent('Auth', [
             'loginRedirect' => '/bookmarks'
-            ]); // Load Authentication - placed here so we can uninstall
+        ]); // Load Authentication - placed here so we can uninstall
         parent::initialize();
     }
 
@@ -28,8 +28,8 @@ class UsersController extends ApplicationController
     public function view($id = null)
     {
         $user = $this->User->get($id, [
-            'associated'=>['Bookmark']
-            ]);
+            'associated' => ['Bookmark']
+        ]);
         $this->set('user', $user);
     }
 
@@ -78,7 +78,7 @@ class UsersController extends ApplicationController
         $user = $this->User->get($id);
 
         if ($this->User->delete($user)) {
-            $this->Flash->success(__('The user {id} has been deleted.', ['id'=>$user->id]));
+            $this->Flash->success(__('The user {id} has been deleted.', ['id' => $user->id]));
         } else {
             $this->Flash->error(__('The user could not be deleted.'));
         }

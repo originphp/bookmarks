@@ -1,7 +1,8 @@
 <?php
 namespace App\Console\Command;
-use Origin\Console\Command\Command;
+
 use Origin\Utility\Yaml;
+use Origin\Console\Command\Command;
 
 class BookmarksListCommand extends Command
 {
@@ -16,18 +17,16 @@ class BookmarksListCommand extends Command
  
     public function execute() : void
     {
-        
         $bookmarks = $this->Bookmark->find('all');
         
         $this->io->title('Bookmarks');
 
-        foreach($bookmarks as $bookmark){
-            $this->io->heading('Bookmark','cyan');
+        foreach ($bookmarks as $bookmark) {
+            $this->io->heading('Bookmark', 'cyan');
             $data = Yaml::fromArray($bookmark->toArray());
             $this->out("<white>{$data}</white>");
         }
 
-        $this->io->success(sprintf('Found %d bookmarks',count($bookmarks)));
-       
+        $this->io->success(sprintf('Found %d bookmarks', count($bookmarks)));
     }
 }

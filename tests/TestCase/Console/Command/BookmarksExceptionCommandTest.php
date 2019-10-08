@@ -1,9 +1,9 @@
 <?php
 namespace App\Test\Console\Command;
 
+use Origin\Exception\Exception;
 use Origin\TestSuite\OriginTestCase;
 use Origin\TestSuite\ConsoleIntegrationTestTrait;
-use Origin\Exception\Exception;
 
 class BookmarksExceptionCommandTest extends OriginTestCase
 {

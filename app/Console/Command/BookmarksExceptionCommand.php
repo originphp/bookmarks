@@ -1,7 +1,8 @@
 <?php
 namespace App\Console\Command;
-use Origin\Console\Command\Command;
+
 use Origin\Exception\Exception;
+use Origin\Console\Command\Command;
 
 class BookmarksExceptionCommand extends Command
 {
@@ -11,11 +12,10 @@ class BookmarksExceptionCommand extends Command
 
     public function initialize() : void
     {
-
     }
  
     public function execute() : void
     {
-       throw new Exception('Freeze!!'); // On purpose
+        throw new Exception('Freeze!!'); // On purpose
     }
 }

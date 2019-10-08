@@ -12,26 +12,26 @@ class BookmarksController extends ApplicationController
     {
         $this->loadComponent('Auth', [
             'loginRedirect' => '/bookmarks'
-            ]); // Load Authentication - placed here so we can uninstall
+        ]); // Load Authentication - placed here so we can uninstall
         parent::initialize();
     }
 
     protected $paginate = [
         'limit' => 20,
-      ];
+    ];
     
     public function index()
     {
         $this->set('bookmarks', $this->paginate('Bookmark', [
-           'associated' => ['User']
+            'associated' => ['User']
         ]));
     }
 
     public function view($id = null)
     {
         $bookmark = $this->Bookmark->get($id, [
-           'associated'=>['User','Tag']
-            ]);
+            'associated' => ['User','Tag']
+        ]);
 
         $this->set('bookmark', $bookmark);
     }
@@ -57,11 +57,10 @@ class BookmarksController extends ApplicationController
         $this->set('categories', $this->Bookmark->categories);
     }
 
-
-    public function edit($id=null)
+    public function edit($id = null)
     {
         $bookmark = $this->Bookmark->get($id, [
-           'associated' => ['Tag']
+            'associated' => ['Tag']
         ]);
 
         if ($this->request->is(['post', 'put'])) {
@@ -87,7 +86,7 @@ class BookmarksController extends ApplicationController
         $bookmark = $this->Bookmark->get($id);
 
         if ($this->Bookmark->delete($bookmark)) {
-            $this->Flash->success(__('The bookmark {id} has been deleted.', ['id'=>$bookmark->id]));
+            $this->Flash->success(__('The bookmark {id} has been deleted.', ['id' => $bookmark->id]));
         } else {
             $this->Flash->error(__('The bookmark could not be deleted.'));
         }

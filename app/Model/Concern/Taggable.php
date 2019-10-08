@@ -1,9 +1,9 @@
 <?php
 namespace App\Model\Concern;
 
+use ArrayObject;
 use Origin\Model\Entity;
 use Origin\Model\Collection;
-use ArrayObject;
 
 trait Taggable
 {
@@ -65,9 +65,10 @@ trait Taggable
         if ($entity->tag_string) {
             $tags = explode(',', $entity->tag_string);
             foreach ($tags as $tag) {
-                $entity->tags[] = new Entity(['title' => $tag], ['name'=>'Tag']);
+                $entity->tags[] = new Entity(['title' => $tag], ['name' => 'Tag']);
             }
         }
+
         return true;
     }
 }

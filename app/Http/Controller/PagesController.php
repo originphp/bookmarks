@@ -15,7 +15,7 @@ class PagesController extends ApplicationController
         $args = func_get_args();
     
         $count = count($args);
-        if (!$count) {
+        if (! $count) {
             return $this->redirect('/');
         }
    
