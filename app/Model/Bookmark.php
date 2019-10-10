@@ -21,7 +21,7 @@ class Bookmark extends ApplicationModel
         'Health' => 'Health',
     ];
 
-    public function initialize(array $config) : void
+    protected function initialize(array $config) : void
     {
         parent::initialize($config);
       

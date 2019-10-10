@@ -37,7 +37,7 @@ class BookmarksUninstallCommand extends Command
     protected $name = 'bookmarks:uninstall';
     protected $description = 'Uninstalls the Bookmarks application';
 
-    public function initialize() : void
+    protected function initialize() : void
     {
         $this->addOption('dry-run', [
             'type' => 'boolean',

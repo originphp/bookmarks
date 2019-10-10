@@ -10,7 +10,7 @@ class BookmarksListCommand extends Command
 
     protected $description = 'List the available bookmarks';
 
-    public function initialize() : void
+    protected function initialize() : void
     {
         $this->loadModel('Bookmark');
     }

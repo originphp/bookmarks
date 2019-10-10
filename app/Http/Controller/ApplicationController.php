@@ -15,7 +15,7 @@ class ApplicationController extends Controller
      * This is called immediately after construct, so you don't have
      * to overload it. Load and configure components, helpers etc.
      */
-    public function initialize() : void
+    protected function initialize() : void
     {
         /**
          * Configure your locale settings here. OriginPHP ships with en_US and en_GB locales
@@ -29,7 +29,7 @@ class ApplicationController extends Controller
     /**
      * This is called before the controller action is executed but after initialize.
      */
-    public function startup()
+    protected function startup()
     {
     }
 
@@ -37,7 +37,7 @@ class ApplicationController extends Controller
      * This is called after the controller action is executed, and view has been rendered
      * but before it has been sent to the client.
      */
-    public function shutdown()
+    protected function shutdown()
     {
     }
 }

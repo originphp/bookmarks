@@ -10,7 +10,7 @@ class ApplicationModel extends Model
 {
     use Delocalizable,Timestampable;
 
-    public function initialize(array $config) : void
+    protected function initialize(array $config) : void
     {
     }
 }

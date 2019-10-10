@@ -8,7 +8,7 @@ use Origin\Utility\Security;
 
 class User extends ApplicationModel
 {
-    public function initialize(array $config) : void
+    protected function initialize(array $config) : void
     {
         parent::initialize($config);
  

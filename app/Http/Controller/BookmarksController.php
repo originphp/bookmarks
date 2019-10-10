@@ -8,7 +8,7 @@ namespace App\Http\Controller;
  */
 class BookmarksController extends ApplicationController
 {
-    public function initialize() : void
+    protected function initialize() : void
     {
         $this->loadComponent('Auth', [
             'loginRedirect' => '/bookmarks'

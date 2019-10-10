@@ -10,7 +10,7 @@ class BookmarksExceptionCommand extends Command
 
     protected $description = 'This is going to generate an exception to display the pretty exception handling';
 
-    public function initialize() : void
+    protected function initialize() : void
     {
     }
  
