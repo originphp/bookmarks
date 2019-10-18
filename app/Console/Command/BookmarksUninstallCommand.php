@@ -6,23 +6,23 @@ use Origin\Console\Command\Command;
 class BookmarksUninstallCommand extends Command
 {
     private $files = [
-        SRC . DS . 'Console' . DS . 'Command' . DS  . 'BookmarksExceptionCommand.php',
-        SRC . DS . 'Console' . DS . 'Command' . DS  . 'BookmarksListCommand.php',
-        SRC . DS . 'Console' . DS . 'Command' . DS  . 'BookmarksUninstallCommand.php',
-        SRC . DS . 'Http' . DS . 'Controller' . DS  . 'BookmarksController.php',
-        SRC . DS . 'Http' . DS . 'Controller' . DS  . 'UsersController.php',
-        SRC . DS . 'Model' . DS  . 'Bookmark.php',
-        SRC . DS . 'Model' . DS  . 'Tag.php',
-        SRC . DS . 'Model' . DS  . 'User.php',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'add.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'edit.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'index.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'view.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'add.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'edit.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'index.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'view.ctp',
-        SRC . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'login.ctp',
+        APP . DS . 'Console' . DS . 'Command' . DS  . 'BookmarksExceptionCommand.php',
+        APP . DS . 'Console' . DS . 'Command' . DS  . 'BookmarksListCommand.php',
+        APP . DS . 'Console' . DS . 'Command' . DS  . 'BookmarksUninstallCommand.php',
+        APP . DS . 'Http' . DS . 'Controller' . DS  . 'BookmarksController.php',
+        APP . DS . 'Http' . DS . 'Controller' . DS  . 'UsersController.php',
+        APP . DS . 'Model' . DS  . 'Bookmark.php',
+        APP . DS . 'Model' . DS  . 'Tag.php',
+        APP . DS . 'Model' . DS  . 'User.php',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'add.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'edit.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'index.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Bookmarks'. DS . 'view.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'add.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'edit.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'index.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'view.ctp',
+        APP . DS . 'Http' . DS . 'View' . DS  . 'Users'. DS . 'login.ctp',
         ROOT . DS . 'tests' . DS . 'Fixture' . DS  . 'BookmarkFixture.php',
         ROOT . DS . 'tests' . DS . 'Fixture' . DS  . 'BookmarksTagFixture.php',
         ROOT . DS . 'tests' . DS . 'Fixture' . DS  . 'UserFixture.php',
@@ -69,7 +69,7 @@ class BookmarksUninstallCommand extends Command
             $this->out('Deleting Folders');
             $this->out('');
 
-            foreach ([SRC . DS . 'View' . DS . 'Bookmarks', SRC . DS . 'View' . DS . 'Users'] as $folder) {
+            foreach ([APP . DS . 'View' . DS . 'Bookmarks', APP . DS . 'View' . DS . 'Users'] as $folder) {
                 if ($this->rmdir($folder)) {
                     $this->io->status('ok', $folder);
                 } else {

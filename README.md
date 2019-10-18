@@ -51,3 +51,11 @@ Seed the database
 ```linux
 $ bin/console db:seed
 ```
+
+## Install Dependencies
+
+This is used by one of the console commands.
+
+```linux
+$ bin/console composer require originphp/yaml
+```
