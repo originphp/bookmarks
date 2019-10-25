@@ -57,5 +57,5 @@ $ bin/console db:seed
 This is used by one of the console commands.
 
 ```linux
-$ bin/console composer require originphp/yaml
+$ composer require originphp/yaml
 ```
