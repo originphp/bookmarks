@@ -54,7 +54,7 @@ class BookmarksController extends ApplicationController
         }
 
         $this->set('bookmark', $bookmark);
-        $this->set('categories', $this->Bookmark->categories);
+        $this->set('categories', $this->Bookmark->categories());
     }
 
     public function edit($id = null)
@@ -76,7 +76,7 @@ class BookmarksController extends ApplicationController
         }
 
         $this->set('bookmark', $bookmark);
-        $this->set('categories', $this->Bookmark->categories);
+        $this->set('categories', $this->Bookmark->categories());
     }
 
     public function delete($id = null)

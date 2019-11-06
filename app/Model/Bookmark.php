@@ -49,4 +49,9 @@ class Bookmark extends ApplicationModel
         $this->belongsTo('User');
         $this->hasAndBelongsToMany('Tag');
     }
+
+    public function categories() : array 
+    {
+        return $this->categories;
+    }
 }
