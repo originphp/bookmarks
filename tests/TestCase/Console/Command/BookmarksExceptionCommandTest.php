@@ -1,7 +1,7 @@
 <?php
 namespace App\Test\Console\Command;
 
-use Origin\Exception\Exception;
+use Origin\Core\Exception\Exception;
 use Origin\TestSuite\OriginTestCase;
 use Origin\TestSuite\ConsoleIntegrationTestTrait;
 

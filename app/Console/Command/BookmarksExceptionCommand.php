@@ -1,7 +1,7 @@
 <?php
 namespace App\Console\Command;
 
-use Origin\Exception\Exception;
+use Origin\Core\Exception\Exception;
 use Origin\Console\Command\Command;
 
 class BookmarksExceptionCommand extends Command
