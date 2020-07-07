@@ -29,8 +29,7 @@ class Bookmark extends ApplicationModel
          * Setup validation rules
          */
         $this->validate('user_id', [
-            'required',
-            'message' => 'This field is required'
+            'required'
         ]);
         $this->validate('title', 'required');
         $this->validate('url', [
