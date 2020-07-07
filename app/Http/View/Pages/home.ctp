@@ -1,15 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <title>Origin Framework</title>
-  </head>
 
   <?php
     function warning($message)
@@ -39,7 +27,7 @@
     <div class="container">
 
       <h1>OriginPHP Framework</h1>
-      <p>This is the test page to see that all is working ok. You can remove or change this by editing the <strong>config/Routes.php</strong>. This is the route that is used to show this page:</p>
+      <p>This is the test page to see that all is working ok. You can remove or change this by editing the <strong>config/routes.php</strong>. This is the route that is used to show this page:</p>
       <pre>
           Router::add('/', ['controller' => 'pages', 'action' => 'display', 'home']);
       </pre>
@@ -63,7 +51,7 @@
       ?>
 
      <?php
-        $env = CONFIG.DS.'.env.php';
+        $env = CONFIG.DS.'.env';
         if (file_exists($env)) {
             success("{$env} found");
         } else {
@@ -85,11 +73,3 @@
         }
       ?>
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
-</html>
