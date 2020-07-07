@@ -12,13 +12,12 @@ class User extends ApplicationModel
     {
         parent::initialize($config);
  
-        $this->validate('name', 'notBlank');
+        $this->validate('name', 'required');
         $this->validate('email', [
-            ['rule' => 'notBlank'],
-            ['rule' => 'email'],
+            'required','email'
         ]);
         $this->validate('password', [
-            ['rule' => 'notBlank'],
+            'required',
             ['rule' => 'alphaNumeric', 'message' => 'Alphanumeric characters only'],
             ['rule' => ['minLength', 6], 'message' => 'Min 6 characters'],
             ['rule' => ['maxLength', 8], 'message' => 'Max 8 characters'],

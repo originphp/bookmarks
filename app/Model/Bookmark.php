@@ -29,14 +29,12 @@ class Bookmark extends ApplicationModel
          * Setup validation rules
          */
         $this->validate('user_id', [
-            'rule' => 'notBlank',
+            'required',
             'message' => 'This field is required'
         ]);
-        $this->validate('title', 'notBlank');
+        $this->validate('title', 'required');
         $this->validate('url', [
-            'notBlank' => [
-                'rule' => 'notBlank'
-            ],
+            'required',
             'url' => [
                 'rule' => 'url',
                 'message' => 'Invalid URL'
@@ -50,7 +48,7 @@ class Bookmark extends ApplicationModel
         $this->hasAndBelongsToMany('Tag');
     }
 
-    public function categories() : array 
+    public function categories() : array
     {
         return $this->categories;
     }
