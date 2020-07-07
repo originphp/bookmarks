@@ -3,7 +3,7 @@ use Origin\Model\Schema;
 
 class ApplicationSchema extends Schema
 {
-    const VERSION = 20190808044021;
+    const VERSION = 20200614000000;
 
     protected $bookmarks = [
         'columns' => [
@@ -33,8 +33,8 @@ class ApplicationSchema extends Schema
         ],
         'constraints' => [
             'primary' => ['type' => 'primary', 'column' => ['bookmark_id', 'tag_id']],
-            'bookmarks_tags_ibfk_1' => ['type' => 'foreign', 'column' => 'tag_id', 'references' => ['tags', 'id'],'update' => 'CASCADE'],
-            'bookmarks_tags_ibfk_2' => ['type' => 'foreign', 'column' => 'bookmark_id', 'references' => ['bookmarks', 'id']],
+            'bookmarks_tags_ibfk_1' => ['type' => 'foreign', 'column' => 'tag_id', 'references' => ['tags', 'id'],'update' => 'cascade'],
+            'bookmarks_tags_ibfk_2' => ['type' => 'foreign', 'column' => 'bookmark_id', 'references' => ['bookmarks', 'id'],'update' => 'cascade']
         ],
         'indexes' => [
             'tag_id' => ['type' => 'index', 'column' => 'tag_id'],
