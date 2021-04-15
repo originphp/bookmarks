@@ -59,3 +59,7 @@ This is used by one of the console commands.
 ```linux
 $ composer require originphp/yaml
 ```
+
+## Access
+
+You can go to http://localhost:8000/bookmarks and use the username `demo@example.com` with the password `origin` to login.
