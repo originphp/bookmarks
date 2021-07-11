@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-  <title>500 Internal Server Error</title>
+  <title><?= $errorCode ?> - <?= $errorMessage ?></title>
   <style>
     html,
     body {
@@ -35,9 +35,9 @@
 <body>
   <div class="h-100 row align-items-center">
     <div class="block col-md-12 text-center">
-      <span class="display-1 d-block">500</span>
+      <span class="display-1 d-block"><?= $errorCode ?></span>
       <div class="mb-4 lead">
-        <p>An internal server error has occured.
+        <p><?= $errorMessage ?></p>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <?php
 /**
  * OriginPHP Framework
- * Copyright 2018 - 2019 Jamiel Sharief.
+ * Copyright 2018 - 2021 Jamiel Sharief.
  *
  * Licensed under The MIT License
  * The above copyright notice and this permission notice shall be included in all copies or substantial
@@ -12,6 +12,18 @@
  * @license     https://opensource.org/licenses/mit-license.php MIT License
  */
 ?>
+
+<?php
+/**
+ * Using this to remove highlight colors.
+ * Note: using highlight string does not return correct class.
+ */
+ini_set('highlight.default', '"class="code_default');
+ini_set('highlight.keyword', '"class="code_keyword');
+ini_set('highlight.string', '"class="code_string');
+ini_set('highlight.html', '"class="code_htmlsrc');
+ini_set('highlight.comment', '"class="code_comment');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,7 +31,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/debug.css">
     <title><?php echo $debug['message']; ?></title>
   </head>
@@ -59,14 +71,13 @@
                   if (empty($stack['file'])) {
                       continue;
                   }
-
-                  $html = highlight_file($stack['file'], true);
-                  $lines = explode('<br />', $html);
+                  $lines = file($stack['file']);
 
                   $preview = '';
                   $i = 1;
 
                   foreach ($lines as $line) {
+                      $line = highlight_string($line, true);
                       if (empty($line)) {
                           $line = '&nbsp;';
                       }
@@ -98,8 +109,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js" ></script>
   </body>
 </html>

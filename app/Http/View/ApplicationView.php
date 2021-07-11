@@ -6,6 +6,7 @@ use Origin\Http\View\View;
 /**
  * @property \Origin\Http\View\Helper\SessionHelper $Session
  * @property \Origin\Http\View\Helper\CookieHelper $Cookie
+ * @property \Origin\Http\View\Helper\HtmlHelper $Html
  * @property \Origin\Http\View\Helper\FormHelper $Form
  * @property \Origin\Http\View\Helper\DateHelper $Date
  * @property \Origin\Http\View\Helper\NumberHelper $Number

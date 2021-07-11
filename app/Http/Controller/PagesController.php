@@ -1,11 +1,14 @@
 <?php
+declare(strict_types = 1);
 namespace App\Http\Controller;
 
 /**
- * @property \App\Model\Bookmark $Bookmark
- * @property \Origin\Http\Controller\Component\SessionComponent $Session
- * @property \Origin\Http\Controller\Component\CookieComponent $Cookie
+ * This is an optional controller for serving static page content. For example
+ * /pages/about_us will load the view file View/Pages/about_us.ctp
+ *
+ *  Router::add('/pages/*', ['controller'=>'Pages','action'=>'display']);
  */
+
 class PagesController extends ApplicationController
 {
     protected $layout = 'default';
