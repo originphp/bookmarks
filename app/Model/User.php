@@ -17,7 +17,7 @@ class User extends ApplicationModel
             'required','email'
         ]);
         $this->validate('password', [
-            'required',
+            ['rule' => 'required','on' => 'create'],
             ['rule' => 'alphaNumeric', 'message' => 'Alphanumeric characters only'],
             ['rule' => ['minLength', 6], 'message' => 'Min 6 characters'],
             ['rule' => ['maxLength', 8], 'message' => 'Max 8 characters'],
