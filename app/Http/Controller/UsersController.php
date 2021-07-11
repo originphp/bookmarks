@@ -62,7 +62,7 @@ class UsersController extends ApplicationController
             if ($this->User->save($user)) {
                 $this->Flash->success('Your user has been updated.');
 
-                return $this->redirect(['action' => 'view', $this->User->id]);
+                return $this->redirect(['action' => 'view',  $user->id]);
             }
 
             $this->Flash->error('Your user could not be saved');
